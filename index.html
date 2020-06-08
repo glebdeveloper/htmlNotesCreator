@@ -166,7 +166,10 @@ function addTable(w, h)
 <button onclick="box.innerHTML+='<hr><br>'">Add horizontal line</button>&nbsp;&nbsp;
 <button onclick="saveHTML(document.querySelector('html').innerHTML)">Save content from the box with editor as html</button>&nbsp;&nbsp;
 <button onclick="saveHTML('<!DOCTYPE HTML><html><meta charset=\'UTF-8\'/>'+((document.querySelector('div').innerHTML)))">Save content from the box as html</button>&nbsp;&nbsp;
-<style type="text/css">body{background: #000;} div{background: #EEF;}
+<style type="text/css">
+body{background: #000;}
+div{background: #EEF;}
+dialog{display:none;}
 button{margin: 5px;}
 </style>
 </html>
