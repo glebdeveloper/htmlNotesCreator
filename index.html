@@ -10,8 +10,8 @@
     	<h4>Add video from youtube</h4>
     	<p>Paste youtu.be url:
     	<input type="url" id="youtube_url"/></p>
-    	<p>width: <input id="Yw" value="300" type="number"/>
-    		hieght: <input type="number" value="300" id="Yh"/>
+    	<p>width: <input class="sizeEdit" id="Yw" value="300" type="number"/>
+    		hieght: <input class="sizeEdit" type="number" value="300" id="Yh"/>
     	</p>
       <button value="cancel">Cancel</button>
       <button value="default"
@@ -26,8 +26,8 @@
     	<h4>Add image from url</h4>
     	Paste image (<i>example: http://example.com/picture.png</i>) url:
     	<input type="url" id="image_url"/><br>
-    	<p>width: <input id="Iw" value="300" type="number"/>
-    		hieght: <input type="number" value="300" id="Ih"/>
+    	<p>width: <input class="sizeEdit" id="Iw" value="300" type="number"/>
+    		hieght: <input class="sizeEdit" type="number" value="300" id="Ih"/>
     	</p>
       <button value="cancel">Cancel</button>
       <button value="default"
@@ -40,8 +40,8 @@
 <dialog id="DialogT">
   <form method="dialog">
     	<h4>Creating and adding table</h4>
-    	<p>cols: <input id="Tw" value="4" type="number"/>
-    		rows: <input type="number" value="4" id="Th"/>
+    	<p>cols: <input class="sizeEdit" id="Tw" value="4" type="number"/>
+    		rows: <input class="sizeEdit" type="number" value="4" id="Th"/>
     	</p>
       <button value="cancel">Cancel</button>
       <button value="default"
@@ -68,8 +68,8 @@
     	<h4>Add video from url</h4>
     	Paste video (<i>example: http://example.com/video.mp4</i>) url:
     	<input type="url" id="video_url"/><br>
-    	<p>width: <input id="Vw" value="300" type="number"/>
-    		hieght: <input type="number" value="300" id="Vh"/>
+    	<p>width: <input class="sizeEdit" id="Vw" value="300" type="number"/>
+    		hieght: <input type="number" class="sizeEdit" value="300" id="Vh"/>
     	</p>
       <button value="cancel">Cancel</button>
       <button value="default"
@@ -171,7 +171,10 @@ function addTable(w, h)
 <button onclick="box.innerHTML+='<hr><br>'">Add horizontal line</button>&nbsp;&nbsp;
 <button onclick="saveHTML(document.querySelector('html').innerHTML)">Save content from the box with editor as html</button>&nbsp;&nbsp;
 <button onclick="saveHTML('<!DOCTYPE HTML><html><meta charset=\'UTF-8\'/>'+((document.querySelector('div').innerHTML)))">Save content from the box as html</button>&nbsp;&nbsp;
-<style type="text/css">body{background: #000;} div{background: #EEF;}
-button{margin: 5px;}
+<style type="text/css">
+	body{background: #000;}
+	div{background: #EEF;}
+	button{margin: 5px;}
+	.sizeEdit{width: 100px; }
 </style>
 </html>
