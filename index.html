@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML>
 <html>
 <script type="text/javascript" src="dialog-polyfill.js"></script>
@@ -10,8 +9,8 @@
     	<h4>Add video from youtube</h4>
     	<p>Paste youtu.be url:
     	<input type="url" id="youtube_url"/></p>
-    	<p>width: <input maxlength="3" class="sizeEdit" id="Yw" value="300" type="number"/>
-    		hieght: <input maxlength="3" class="sizeEdit" type="number" value="300" id="Yh"/>
+    	<p>width: <input min="0" max="999" class="sizeEdit" id="Yw" value="300" type="number"/>
+    		hieght: <input min="0" max="999" class="sizeEdit" type="number" value="300" id="Yh"/>
     	</p>
       <button value="cancel">Cancel</button>
       <button value="default"
@@ -26,8 +25,8 @@
     	<h4>Add image from url</h4>
     	Paste image (<i>example: http://example.com/picture.png</i>) url:
     	<input type="url" id="image_url"/><br>
-    	<p>width: <input maxlength="3" class="sizeEdit" id="Iw" value="300" type="number"/>
-    		hieght: <input maxlength="3" class="sizeEdit" type="number" value="300" id="Ih"/>
+    	<p>width: <input min="0" max="999" class="sizeEdit" id="Iw" value="300" type="number"/>
+    		hieght: <input min="0" max="999" class="sizeEdit" type="number" value="300" id="Ih"/>
     	</p>
       <button value="cancel">Cancel</button>
       <button value="default"
@@ -40,8 +39,8 @@
 <dialog id="DialogT">
   <form method="dialog">
     	<h4>Creating and adding table</h4>
-    	<p>cols: <input maxlength="3" class="sizeEdit" id="Tw" value="4" type="number"/>
-    		rows: <input maxlength="3" class="sizeEdit" type="number" value="4" id="Th"/>
+    	<p>cols: <input min="0" max="999" class="sizeEdit" id="Tw" value="4" type="number"/>
+    		rows: <input min="0" max="999" class="sizeEdit" type="number" value="4" id="Th"/>
     	</p>
       <button value="cancel">Cancel</button>
       <button value="default"
@@ -68,8 +67,8 @@
     	<h4>Add video from url</h4>
     	Paste video (<i>example: http://example.com/video.mp4</i>) url:
     	<input type="url" id="video_url"/><br>
-    	<p>width: <input maxlength="3" class="sizeEdit" id="Vw" value="300" type="number"/>
-    		hieght: <input maxlength="3" type="number" class="sizeEdit" value="300" id="Vh"/>
+    	<p>width: <input min="0" max="999" class="sizeEdit" id="Vw" value="300" type="number"/>
+    		hieght: <input min="0" max="999" type="number" class="sizeEdit" value="300" id="Vh"/>
     	</p>
       <button value="cancel">Cancel</button>
       <button value="default"
