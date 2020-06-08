@@ -109,13 +109,17 @@ Jun7 2020
 <script type="text/javascript">
 var box=document.getElementById("box");
 box.contentEditable='true';
-//var DialogY=document.getElementById("DialogY");
 function show_dialog(Dialog){
-	if (typeof Dialog.showModal === 'function') {
-    Dialog.showModal();
+	function show_dialog(Dialog){
+  dialogPolyfill.registerDialog(Dialog);
+  Dialog.showModal();
+	if (typeof Dialog.show === 'function') {
+    Dialog.show();
   } else {
     alert('The <dialog> API is not supported by this browser');
   }
+}
+//
 }
 function AddUrlConfirm(what, w, h, url){
 	if(what=="Y"){
