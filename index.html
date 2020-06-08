@@ -86,11 +86,19 @@
       <button value="cancel">Cancel</button>
       <button
       onclick="addHyperlink(document.getElementById('just_url').value,document.getElementById('url_text').value)"
-       value="default">Confirm</button>
+       value="default">Add link</button>
   </form>
 </dialog>
 
-
+<dialog id="DialogHTML">
+	<form method="dialog">
+	<p>Paste html code which you want to add</p>
+	<textarea id="htmlIn"></textarea>
+	<button value="cancel">Cancel</button>
+	<button onclick="box.innerHTML+='<div class=\'htmlInsert\''+document.getElementById('htmlIn').value+'</div>'">Add html</button>
+	</form>
+</dialog>
+	
 <div style="border: thick solid #0000FF; border-radius: 10px; padding: 10px; margin: 20px;" id="box">
 Hello User!<br>
 It's a text editor. You can click to this box for editing this text<br>
@@ -101,7 +109,7 @@ Jun7 2020
 <script type="text/javascript">
 var box=document.getElementById("box");
 box.contentEditable='true';
-var DialogY=document.getElementById("DialogY");
+//var DialogY=document.getElementById("DialogY");
 function show_dialog(Dialog){
 	if (typeof Dialog.showModal === 'function') {
     Dialog.showModal();
@@ -113,7 +121,7 @@ function AddUrlConfirm(what, w, h, url){
 	if(what=="Y"){
 		box.innerHTML+="<p><iframe width='"+w+"'' height='"+h+"'' src='https://www.youtube.com/embed/"+url.split("/")[3]+"' allowfullscreen></iframe></p><br>";
 	}
-	else if(what=="I"){
+	eldocument.getElementById("Dialogse if(what=="I"){
 		box.innerHTML+="<p><img src='"+url+"' width='"+w+"' height='"+h+"'/></p><br>";
 	}
 	else if(what=="A"){
