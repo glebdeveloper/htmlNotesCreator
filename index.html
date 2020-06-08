@@ -10,8 +10,8 @@
     	<h4>Add video from youtube</h4>
     	<p>Paste youtu.be url:
     	<input type="url" id="youtube_url"/></p>
-    	<p>width: <input class="sizeEdit" id="Yw" value="300" type="number"/>
-    		hieght: <input class="sizeEdit" type="number" value="300" id="Yh"/>
+    	<p>width: <input maxlength="3" class="sizeEdit" id="Yw" value="300" type="number"/>
+    		hieght: <input maxlength="3" class="sizeEdit" type="number" value="300" id="Yh"/>
     	</p>
       <button value="cancel">Cancel</button>
       <button value="default"
@@ -26,8 +26,8 @@
     	<h4>Add image from url</h4>
     	Paste image (<i>example: http://example.com/picture.png</i>) url:
     	<input type="url" id="image_url"/><br>
-    	<p>width: <input class="sizeEdit" id="Iw" value="300" type="number"/>
-    		hieght: <input class="sizeEdit" type="number" value="300" id="Ih"/>
+    	<p>width: <input maxlength="3" class="sizeEdit" id="Iw" value="300" type="number"/>
+    		hieght: <input maxlength="3" class="sizeEdit" type="number" value="300" id="Ih"/>
     	</p>
       <button value="cancel">Cancel</button>
       <button value="default"
@@ -40,8 +40,8 @@
 <dialog id="DialogT">
   <form method="dialog">
     	<h4>Creating and adding table</h4>
-    	<p>cols: <input class="sizeEdit" id="Tw" value="4" type="number"/>
-    		rows: <input class="sizeEdit" type="number" value="4" id="Th"/>
+    	<p>cols: <input maxlength="3" class="sizeEdit" id="Tw" value="4" type="number"/>
+    		rows: <input maxlength="3" class="sizeEdit" type="number" value="4" id="Th"/>
     	</p>
       <button value="cancel">Cancel</button>
       <button value="default"
@@ -68,8 +68,8 @@
     	<h4>Add video from url</h4>
     	Paste video (<i>example: http://example.com/video.mp4</i>) url:
     	<input type="url" id="video_url"/><br>
-    	<p>width: <input class="sizeEdit" id="Vw" value="300" type="number"/>
-    		hieght: <input type="number" class="sizeEdit" value="300" id="Vh"/>
+    	<p>width: <input maxlength="3" class="sizeEdit" id="Vw" value="300" type="number"/>
+    		hieght: <input maxlength="3" type="number" class="sizeEdit" value="300" id="Vh"/>
     	</p>
       <button value="cancel">Cancel</button>
       <button value="default"
@@ -177,7 +177,6 @@ function addTable(w, h)
 	button{margin: 5px;}
 	.sizeEdit{
 		width: 45px;
-		max-length: 4;
 	}
 </style>
 </html>
