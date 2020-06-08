@@ -1,6 +1,7 @@
+
 <!DOCTYPE HTML>
 <html>
-	<script type="text/javascript" src="dialog-polyfill.js"></script>
+<script type="text/javascript" src="dialog-polyfill.js"></script>
 <title>HTML Notes Creator</title>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -94,9 +95,9 @@
 <dialog id="DialogHTML">
 	<form method="dialog">
 	<p>Paste html code which you want to add</p>
-	<textarea id="htmlIn"></textarea>
+	<p><textarea id="htmlIn"></textarea></p>
 	<button value="cancel">Cancel</button>
-	<button onclick="box.innerHTML+='<div class=\'htmlInsert\''+document.getElementById('htmlIn').value+'</div>'">Add html</button>
+	<button onclick="box.innerHTML+='<div class=\'htmlInsert\'>'+document.getElementById('htmlIn').value+'</div>'">Add html</button>
 	</form>
 </dialog>
 	
@@ -110,8 +111,8 @@ Jun7 2020
 <script type="text/javascript">
 var box=document.getElementById("box");
 box.contentEditable='true';
+//var DialogY=document.getElementById("DialogY");
 function show_dialog(Dialog){
-	function show_dialog(Dialog){
   dialogPolyfill.registerDialog(Dialog);
   Dialog.showModal();
 	if (typeof Dialog.show === 'function') {
@@ -119,8 +120,6 @@ function show_dialog(Dialog){
   } else {
     alert('The <dialog> API is not supported by this browser');
   }
-}
-//
 }
 function AddUrlConfirm(what, w, h, url){
 	if(what=="Y"){
@@ -171,9 +170,7 @@ function addTable(w, h)
 <button onclick="box.innerHTML+='<hr><br>'">Add horizontal line</button>&nbsp;&nbsp;
 <button onclick="saveHTML(document.querySelector('html').innerHTML)">Save content from the box with editor as html</button>&nbsp;&nbsp;
 <button onclick="saveHTML('<!DOCTYPE HTML><html><meta charset=\'UTF-8\'/>'+((document.querySelector('div').innerHTML)))">Save content from the box as html</button>&nbsp;&nbsp;
-<style type="text/css">
-body{background: #000;}
-div{background: #EEF;}
+<style type="text/css">body{background: #000;} div{background: #EEF;}
 button{margin: 5px;}
 </style>
 </html>
